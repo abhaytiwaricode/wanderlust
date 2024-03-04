@@ -1,6 +1,6 @@
 # Wanderlust Web Application
 
-Wanderlust is a web application built on the MERN (MongoDB, Express.js, React.js, Node.js) stack that allows users to explore and book vacation rentals.
+Wanderlust is a web application built on the MERN (MongoDB, Express.js, Node.js) stack that allows users to explore and book vacation rentals.
 
 ## Installation
 
