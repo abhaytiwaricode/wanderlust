@@ -87,6 +87,21 @@ h4 {
   align-items: center;
 }
 
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
 /* Cards */
 
 .card {
@@ -121,15 +136,6 @@ h4 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* .card-img-overlay {
-  opacity: 0;
-}
-
-.card-img-overlay:hover {
-  opacity: 0.2;
-  background-color: white;
-} */
 
 /* New Page */
 
