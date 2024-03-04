@@ -6,7 +6,7 @@ Wanderlust is a web application built on the MERN (MongoDB, Express.js, React.js
 
 - Clone the repository:
   ```sh
-  git clone https://github.com/your-username/your-repository.git
+  git clone https://github.com/abhaytiwaricode/wanderlust.git
   ```
 - Navigate to the project directory:
 
