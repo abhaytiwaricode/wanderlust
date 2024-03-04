@@ -280,3 +280,11 @@ h4 {
     display: none;
   }
 }
+
+.signup-container {
+  padding-bottom: 8rem;
+}
+
+.login-container {
+  padding-bottom: 16rem;
+}
