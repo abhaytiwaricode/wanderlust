@@ -378,7 +378,7 @@ const sampleListings = [
       filename: 'image_3.jpg',
     },
     price: 5703,
-    location: 'City Center House, Mumbai',
+    location: 'City Center House, Goa',
     country: 'India',
   },
   {
