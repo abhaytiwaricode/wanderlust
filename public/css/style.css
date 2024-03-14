@@ -14,9 +14,9 @@ body {
   overflow-x: hidden;
 }
 
-.listings-container {
+/* .listings-container {
   padding-top: 6rem;
-}
+} */
 
 .container {
   flex: 1;
@@ -200,12 +200,8 @@ h4 {
   white-space: nowrap;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  border-bottom: 1px solid #ccc;
   scroll-behavior: unset;
-  position: fixed;
-  z-index: 1000;
-  background-color: white;
-  width: 81.6%;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -251,9 +247,9 @@ h4 {
     white-space: nowrap;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    width: 93.5%;
+    scroll-behavior: unset;
+    width: 100%;
     max-width: 100%;
-    background-color: white;
   }
   .filter {
     margin-right: 1rem;
@@ -267,16 +263,14 @@ h4 {
   #filters-container {
     overflow-x: auto;
     white-space: nowrap;
-    margin-left: 1.3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    border-bottom: none;
-    width: 90.5%;
-    margin-left: -2px;
+    scroll-behavior: unset;
+    width: 100%;
     max-width: 100%;
+    padding-left: 1rem;
     display: flex;
     justify-content: center;
-    background-color: white;
   }
   .filter {
     margin-right: 1rem;
@@ -296,16 +290,14 @@ h4 {
   #filters-container {
     overflow-x: auto;
     white-space: nowrap;
-    margin-left: 4.5rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    border-bottom: none;
-    width: 95.5%;
-    margin-left: -2px;
+    scroll-behavior: unset;
+    width: 100%;
     max-width: 100%;
+    padding-left: 1rem;
     display: flex;
     justify-content: center;
-    background-color: white;
   }
   .tax-toggle {
     display: none;
