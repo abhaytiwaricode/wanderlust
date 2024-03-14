@@ -250,6 +250,7 @@ h4 {
     scroll-behavior: unset;
     width: 100%;
     max-width: 100%;
+    border-bottom: 1px solid rgb(177, 177, 177);
   }
   .filter {
     margin-right: 1rem;
