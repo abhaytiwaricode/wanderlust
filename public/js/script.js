@@ -52,14 +52,47 @@ function dismissAlert() {
   }
 }
 
+// let taxSwitch = document.getElementById('flexSwitchCheckDefault');
+// taxSwitch.addEventListener('click', () => {
+//   let taxInfo = document.getElementsByClassName('tax-info');
+//   for (let info of taxInfo) {
+//     if (info.style.display !== 'inline') {
+//       info.style.display = 'inline';
+//     } else {
+//       info.style.display = 'none';
+//     }
+//   }
+// });
+
 let taxSwitch = document.getElementById('flexSwitchCheckDefault');
-taxSwitch.addEventListener('click', () => {
-  let taxInfo = document.getElementsByClassName('tax-info');
-  for (let info of taxInfo) {
-    if (info.style.display !== 'inline') {
-      info.style.display = 'inline';
-    } else {
-      info.style.display = 'none';
-    }
-  }
+
+taxSwitch.addEventListener('change', () => {
+  updatePriceDisplay(taxSwitch.checked);
 });
+
+function updatePriceDisplay(isTaxSwitchOn) {
+  let priceInfoElements = document.querySelectorAll('.price-info');
+
+  priceInfoElements.forEach((priceInfo) => {
+    const basePrice = parseFloat(priceInfo.dataset.basePrice);
+    const totalPrice = isTaxSwitchOn
+      ? calculateTotalPrice(basePrice)
+      : basePrice;
+
+    priceInfo.innerHTML = `&#8377; ${totalPrice.toLocaleString(
+      'en-IN'
+    )} /night`;
+
+    if (isTaxSwitchOn) {
+      priceInfo.innerHTML += ` <i class="tax"> &nbsp;with 18% GST</i>`;
+    }
+  });
+}
+
+// Function to calculate total price with GST
+function calculateTotalPrice(basePrice) {
+  const gstPercentage = 18;
+  const gstAmount = (basePrice * gstPercentage) / 100;
+  const totalPrice = basePrice + gstAmount;
+  return totalPrice.toLocaleString('en-IN');
+}

@@ -9,7 +9,7 @@
           class="card-img-top show-img img-fluid"
           alt="listing_image"
         />
-        <ul class="list-group list-unstyled mt-3">
+        <ul class="list-group list-unstyled mt-3 w-75">
           <li>
             <span class="fw-bold me-2">Description:</span>
             <span><%= listing.description %></span>
@@ -28,27 +28,37 @@
             <span class="fw-bold me-2">Country:</span>
             <span><%= listing.country %></span>
           </li>
+
           <li>
-            <span class="fw-bold me-2">Owned by:</span>
-            <span><%= listing.owner.username %></span>
+            <span class="fw-bold me-2">Owned by : </span>
+            <% if (listing.owner && listing.owner.username) { %>
+            <span>@<%= listing.owner.username %></span>
+            <% } else { %>
+            <span>Hidden</span>
+            <% } %>
           </li>
         </ul>
       </div>
-      <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
+
+      <% if(currUser && listing.owner && currUser._id.equals(listing.owner._id))
+      { %>
       <div class="d-flex py-4">
-        <a
-          href="/listings/<%= listing._id %>/edit"
-          class="btn btn-primary me-2 edit-btn"
-          >Edit</a
-        >
-        <form
-          action="/listings/<%= listing._id %>?_method=DELETE"
-          method="POST"
-        >
-          <button type="submit" class="btn btn-dark">Delete</button>
-        </form>
+          <a
+            href="/listings/<%= listing._id %>/edit"
+            class="btn btn-primary me-2 edit-btn"
+            >Edit</a
+          >
+
+          <form
+            action="/listings/<%= listing._id %>?_method=DELETE"
+            method="POST"
+          >
+            <button type="submit" class="btn btn-dark">Delete</button>
+          </form>
       </div>
-      <% } %> <% if(currUser) { %>
+      <% } %>
+      <% if(currUser) { %>
+
       <div class="col-12 mb-2 ul-list">
         <hr class="ul-list" />
         <h4 class="fw-bold">Leave a Review</h4>
@@ -61,6 +71,15 @@
           <div class="mb-3 mt-3">
             <fieldset class="starability-slot">
               <p for="rating" class="form-label fw-bold">Rating:</p>
+              <input
+                type="radio"
+                id="no-rate"
+                class="input-no-rate"
+                name="review[rating]"
+                value="1"
+                checked
+                aria-label="No rating."
+              />
               <input
                 type="radio"
                 id="no-rate"
@@ -129,14 +148,16 @@
       <% } %>
     </div>
     <hr />
-    <b><h4>All Review</h4></b>
-    <div class="row row-cols-1 row-cols-md-2">
-      <% for( review of listing.reviews) { %>
+    <h4>All Reviews</h4>
+    <div class="row row-cols-1 row-cols-md-2 w-100">
+      <% for(review of listing.reviews) { %>
       <div class="col">
         <div class="card review-card border">
           <div class="card-body mt-1 ms-2">
             <div class="d-flex align-items-center">
-              <h6 class="card-title fw-bold">@<%= review.author.username %></h6>
+              <h6 class="card-title fw-bold">
+                @<%= review.author.username %>
+              </h6>
             </div>
             <p
               class="starability-result card-text"
@@ -157,4 +178,5 @@
       <% } %>
     </div>
   </div>
+</div>
 </div>

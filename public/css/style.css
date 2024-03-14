@@ -14,6 +14,10 @@ body {
   overflow-x: hidden;
 }
 
+.listings-container {
+  padding-top: 6rem;
+}
+
 .container {
   flex: 1;
 }
@@ -111,9 +115,9 @@ h4 {
 
 .card-img-top {
   border-radius: 1rem !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 16rem !important;
+  width: 99% !important;
+  max-width: 120% !important;
+  height: 19rem !important;
   /* object-fit: cover !important; */
 }
 
@@ -143,25 +147,26 @@ h4 {
 .edit-btn {
   background-color: #fe424d !important;
   border: none !important;
+  color: white !important;
 }
 
 /* Show Page */
 
 .show-img {
   height: 40vh !important;
-  width: 100% !important;
+  width: 99% !important;
   object-fit: cover !important;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .show-img {
-    width: 100% !important;
+    width: 99% !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1024px) and (min-height: 1366px) {
   .show-img {
-    width: 100% !important;
+    width: 99% !important;
     height: auto !important;
   }
 }
@@ -193,9 +198,15 @@ h4 {
 #filters-container {
   overflow-x: auto;
   white-space: nowrap;
-  padding-bottom: 1rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  border-bottom: 1px solid #ccc;
+  scroll-behavior: unset;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+  width: 81.6%;
+  max-width: 100%;
 }
 
 #filters {
@@ -207,6 +218,8 @@ h4 {
   margin-right: 2rem;
   margin-top: 2rem;
   opacity: 0.7;
+  text-decoration: none;
+  color: rgb(56, 53, 53);
 }
 .filter:hover {
   opacity: 1;
@@ -219,6 +232,7 @@ h4 {
   display: none;
   font-size: 0.9rem;
 }
+
 .tax-toggle {
   /* border: 1px solid rgb(143, 143, 143); */
   border-radius: 1rem;
@@ -237,6 +251,9 @@ h4 {
     white-space: nowrap;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    width: 93.5%;
+    max-width: 100%;
+    background-color: white;
   }
   .filter {
     margin-right: 1rem;
@@ -253,6 +270,13 @@ h4 {
     margin-left: 1.3rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    border-bottom: none;
+    width: 90.5%;
+    margin-left: -2px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
   }
   .filter {
     margin-right: 1rem;
@@ -275,6 +299,13 @@ h4 {
     margin-left: 4.5rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    border-bottom: none;
+    width: 95.5%;
+    margin-left: -2px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
   }
   .tax-toggle {
     display: none;

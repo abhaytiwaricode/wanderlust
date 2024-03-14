@@ -1,11 +1,19 @@
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
+    <!-- Brand logo and navigation links -->
     <a class="navbar-brand d-flex align-items-center" href="/listings">
       <i class="fa-regular fa-compass"></i>
+      <span
+        class="navbar-text d-inline d-md-none logo-txt ms-2"
+        style="font-size: 1.5rem"
+        >wanderlust</span
+      >
       <span class="navbar-text d-none d-md-inline logo-txt ms-2"
         >wanderlust</span
       >
     </a>
+
+    <!-- Hamburger menu toggle -->
     <button
       class="navbar-toggler"
       type="button"
@@ -14,18 +22,26 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Collapsible content -->
     <div class="collapse navbar-collapse bg-white" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" href="/listings"><b>Explore</b></a>
       </div>
 
+      <!-- Search form -->
       <div class="navbar-nav ms-auto">
-        <!-- Add d-none d-md-flex classes to hide the search bar on small screens -->
-        <form class="d-flex d-none d-md-flex" role="search">
+        <form
+          class="d-flex d-none d-md-flex"
+          role="search"
+          action="/listings/search"
+          method="GET"
+        >
           <input
             class="form-control me-2 rounded-pill border border-secondary-subtle px-3"
             type="search"
             placeholder="Search destinations"
+            name="q"
           />
           <button class="btn btn-primary add-btn rounded-circle" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -33,6 +49,7 @@
         </form>
       </div>
 
+      <!-- Profile menu -->
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Airbnb your home</a>
         <% if(!currUser) { %>

@@ -1,104 +1,111 @@
-<% layout('/layouts/boilerplate') %>
-<div class="row">
-  <div class="col-8 offset-2">
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-2">
+  <div class="col-sm-8 offset-sm-2 px-3">
+    <br />
+    <h4 class="mb-3">Create a new listing</h4>
     <form
+      method="post"
       action="/listings"
-      method="POST"
       novalidate
       class="needs-validation"
       enctype="multipart/form-data"
     >
-      <h4>Create a New Listing</h4>
       <div class="mb-3">
-        <label for="title" class="form-label"
-          >Title<span class="text-danger">*</span></label
-        >
+        <label for="title" class="form-label">Title</label>
         <input
           type="text"
-          id="title"
-          name="listing[title]"
           class="form-control"
-          placeholder="Add a catcy title"
+          name="listing[title]"
+          placeholder="enter title"
           required
         />
         <div class="valid-feedback">Title looks good!</div>
       </div>
 
       <div class="mb-3">
-        <label for="description" class="form-label"
-          >Description <span class="text-danger">*</span></label
-        >
+        <label for="description" class="form-label">Description</label>
         <textarea
-          id="description"
-          name="listing[description]"
+          type="text"
           class="form-control"
+          name="listing[description]"
+          placeholder="enter description"
           required
         ></textarea>
-        <div class="invalid-feedback">Please enter a short description.</div>
+        <div class="invalid-feedback">Please enter a short description</div>
       </div>
 
       <div class="mb-3">
-        <label for="image" class="form-label">Uplaod Listing Image</label>
-        <span class="text-danger">*</span>
+        <label for="image" class="form-label">Upload Listing Iamge</label>
         <input
           type="file"
-          id="image"
-          name="listing[image]"
           class="form-control"
+          name="listing[image]"
           required
         />
-        <div class="invalid-feedback">Please uplaod listing Image.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="validationCustom04" class="form-label">Category</label>
+        <select
+          class="form-select"
+          id="validationCustom04"
+          name="listing[category]"
+          required
+        >
+          <option selected disabled value="">Select a category</option>
+          <option value="Rooms">Rooms</option>
+          <option value="Iconic cities">Iconic cities</option>
+          <option value="Mountains">Mountains</option>
+          <option value="Castles">Castles</option>
+          <option value="Amazing pools">Amazing pools</option>
+          <option value="Camping">Camping</option>
+          <option value="Farms">Farms</option>
+          <option value="Arctic">Arctic</option>
+          <option value="Domes">Domes</option>
+          <option value="Boats">Boats</option>
+        </select>
+        <div class="invalid-feedback">Please select a valid category.</div>
       </div>
 
       <div class="row">
         <div class="mb-3 col-md-4">
-          <label for="price" class="form-label"
-            >Price<span class="text-danger">*</span></label
-          >
+          <label for="price" class="form-label">Price</label>
           <input
-            type="number"
-            id="price"
-            name="listing[price]"
+            type="text"
             class="form-control"
-            placeholder="1100"
-            min="0"
+            name="listing[price]"
+            placeholder="enter price"
             required
           />
-          <div class="invalid-feedback">Price Should be valid.</div>
+          <div class="invalid-feedback">Please enter a valid price</div>
         </div>
 
         <div class="mb-3 col-md-8">
-          <label for="country" class="form-label"
-            >Country<span class="text-danger">*</span></label
-          >
+          <label for="country" class="form-label">Country</label>
           <input
             type="text"
-            id="country"
-            name="listing[country]"
             class="form-control"
-            placeholder="India"
+            name="listing[country]"
+            placeholder="enter country"
             required
           />
-          <div class="invalid-feedback">Country name should be valid.</div>
+          <div class="invalid-feedback">Country name should be valid</div>
         </div>
       </div>
 
       <div class="mb-3">
-        <label for="location" class="form-label"
-          >Location<span class="text-danger">*</span></label
-        >
+        <label for="location" class="form-label">Location</label>
         <input
           type="text"
-          id="location"
-          name="listing[location]"
           class="form-control"
-          placeholder="Lucknow, Uttar pradesh"
+          name="listing[location]"
+          placeholder="enter location"
           required
         />
-        <div class="invalid-feedback">Location should be valid.</div>
+        <div class="invalid-feedback">Location should be valid</div>
       </div>
-
-      <button type="submit" class="btn btn-dark add-btn mb-3">Add</button>
+      <button class="btn add-btn mt-3">Add</button>
+      <br /><br />
     </form>
   </div>
 </div>

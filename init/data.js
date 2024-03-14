@@ -10,6 +10,7 @@ const sampleListings = [
     price: 1500,
     location: 'Malibu',
     country: 'United States',
+    category: 'Amazing pools',
   },
   {
     title: 'Modern Loft in Downtown',
@@ -22,6 +23,7 @@ const sampleListings = [
     price: 1200,
     location: 'New York City',
     country: 'United States',
+    category: 'Boats',
   },
   {
     title: 'Mountain Retreat',
@@ -34,6 +36,7 @@ const sampleListings = [
     price: 1000,
     location: 'Aspen',
     country: 'United States',
+    category: 'Mountains',
   },
   {
     title: 'Historic Villa in Tuscany',
@@ -46,6 +49,7 @@ const sampleListings = [
     price: 2500,
     location: 'Florence',
     country: 'Italy',
+    category: 'Amazing pools',
   },
   {
     title: 'Secluded Treehouse Getaway',
@@ -58,6 +62,7 @@ const sampleListings = [
     price: 800,
     location: 'Portland',
     country: 'United States',
+    category: 'Camping',
   },
   {
     title: 'Beachfront Paradise',
@@ -70,6 +75,7 @@ const sampleListings = [
     price: 2000,
     location: 'Cancun',
     country: 'Mexico',
+    category: 'Amazing pools',
   },
   {
     title: 'Rustic Cabin by the Lake',
@@ -82,6 +88,7 @@ const sampleListings = [
     price: 900,
     location: 'Lake Tahoe',
     country: 'United States',
+    category: 'Mountains',
   },
   {
     title: 'Luxury Penthouse with City Views',
@@ -94,6 +101,7 @@ const sampleListings = [
     price: 3500,
     location: 'Los Angeles',
     country: 'United States',
+    category: 'Iconic cities',
   },
   {
     title: 'Ski-In/Ski-Out Chalet',
@@ -106,6 +114,7 @@ const sampleListings = [
     price: 3000,
     location: 'Verbier',
     country: 'Switzerland',
+    category: 'Boats',
   },
   {
     title: 'Safari Lodge in the Serengeti',
@@ -118,6 +127,7 @@ const sampleListings = [
     price: 4000,
     location: 'Serengeti National Park',
     country: 'Tanzania',
+    category: 'Mountains',
   },
   {
     title: 'Historic Canal House',
@@ -130,6 +140,7 @@ const sampleListings = [
     price: 1800,
     location: 'Amsterdam',
     country: 'Netherlands',
+    category: 'Camping',
   },
   {
     title: 'Private Island Retreat',
@@ -142,6 +153,7 @@ const sampleListings = [
     price: 10000,
     location: 'Fiji',
     country: 'Fiji',
+    category: 'Rooms',
   },
   {
     title: 'Charming Cottage in the Cotswolds',
@@ -154,6 +166,7 @@ const sampleListings = [
     price: 1200,
     location: 'Cotswolds',
     country: 'United Kingdom',
+    category: 'Boats',
   },
   {
     title: 'Historic Brownstone in Boston',
@@ -166,6 +179,7 @@ const sampleListings = [
     price: 2200,
     location: 'Boston',
     country: 'United States',
+    category: 'Castles',
   },
   {
     title: 'Beachfront Bungalow in Bali',
@@ -178,6 +192,7 @@ const sampleListings = [
     price: 1800,
     location: 'Bali',
     country: 'Indonesia',
+    category: 'Camping',
   },
   {
     title: 'Mountain View Cabin in Banff',
@@ -190,6 +205,7 @@ const sampleListings = [
     price: 1500,
     location: 'Banff',
     country: 'Canada',
+    category: 'Mountains',
   },
   {
     title: 'Art Deco Apartment in Miami',
@@ -202,6 +218,7 @@ const sampleListings = [
     price: 1600,
     location: 'Miami',
     country: 'United States',
+    category: 'Arctic',
   },
   {
     title: 'Tropical Villa in Phuket',
@@ -214,6 +231,7 @@ const sampleListings = [
     price: 3000,
     location: 'Phuket',
     country: 'Thailand',
+    category: 'Arctic',
   },
   {
     title: 'Historic Castle in Scotland',
@@ -226,6 +244,7 @@ const sampleListings = [
     price: 4000,
     location: 'Scottish Highlands',
     country: 'United Kingdom',
+    category: 'Iconic cities',
   },
   {
     title: 'Desert Oasis in Dubai',
@@ -238,6 +257,7 @@ const sampleListings = [
     price: 5000,
     location: 'Dubai',
     country: 'United Arab Emirates',
+    category: 'Iconic cities',
   },
   {
     title: 'Rustic Log Cabin in Montana',
@@ -250,6 +270,7 @@ const sampleListings = [
     price: 1100,
     location: 'Montana',
     country: 'United States',
+    category: 'Farms',
   },
   {
     title: 'Beachfront Villa in Greece',
@@ -262,6 +283,7 @@ const sampleListings = [
     price: 2500,
     location: 'Mykonos',
     country: 'Greece',
+    category: 'Amazing pools',
   },
   {
     title: 'Eco-Friendly Treehouse Retreat',
@@ -274,6 +296,7 @@ const sampleListings = [
     price: 750,
     location: 'Costa Rica',
     country: 'Costa Rica',
+    category: 'Rooms',
   },
   {
     title: 'Historic Cottage in Charleston',
@@ -286,6 +309,7 @@ const sampleListings = [
     price: 1600,
     location: 'Charleston',
     country: 'United States',
+    category: 'Farms',
   },
   {
     title: 'Modern Apartment in Tokyo',
@@ -298,6 +322,7 @@ const sampleListings = [
     price: 2000,
     location: 'Tokyo',
     country: 'Japan',
+    category: 'Iconic cities',
   },
   {
     title: 'Lakefront Cabin in New Hampshire',
@@ -310,6 +335,7 @@ const sampleListings = [
     price: 1200,
     location: 'New Hampshire',
     country: 'United States',
+    category: 'Camping',
   },
   {
     title: 'Luxury Villa in the Maldives',
@@ -322,6 +348,7 @@ const sampleListings = [
     price: 6000,
     location: 'Maldives',
     country: 'Maldives',
+    category: 'Iconic cities',
   },
   {
     title: 'Ski Chalet in Aspen',
@@ -334,6 +361,7 @@ const sampleListings = [
     price: 4000,
     location: 'Aspen',
     country: 'United States',
+    category: 'Boats',
   },
   {
     title: 'Secluded Beach House in Costa Rica',
@@ -346,107 +374,7 @@ const sampleListings = [
     price: 1800,
     location: 'Costa Rica',
     country: 'Costa Rica',
-  },
-  {
-    title: 'Serene Mountain Escape',
-    description: 'Escape to this serene cabin in the mountains',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457167/wanderlust_DEV/image_5.jpg_t6muaq.jpg',
-      filename: 'image_1.jpg',
-    },
-    price: 5702,
-    location: 'Mountain Retreat, Manali',
-    country: 'India',
-  },
-  {
-    title: 'Luxury Beachfront Retreat',
-    description:
-      'Indulge in luxury at this beachfront villa with stunning ocean views',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457183/wanderlust_DEV/image_2.jpg_y2pb09.jpg',
-      filename: 'image_2.jpg',
-    },
-    price: 5701,
-    location: 'Beachfront Villa, Calangute',
-    country: 'India',
-  },
-  {
-    title: 'Modern City Living',
-    description: 'Experience modern living in the heart of the city',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457171/wanderlust_DEV/image_6.jpg_n3ru6a.jpg',
-      filename: 'image_3.jpg',
-    },
-    price: 5703,
-    location: 'City Center House, Goa',
-    country: 'India',
-  },
-  {
-    title: 'Seaside Charm',
-    description: 'Enjoy the charm of this seaside cottage overlooking the sea',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457190/wanderlust_DEV/image_9.jpg_szhac0.jpg',
-      filename: 'image_4.jpg',
-    },
-    price: 5704,
-    location: 'Seaside Cottage, Kovalam',
-    country: 'India',
-  },
-  {
-    title: 'Tranquil Lakefront Getaway',
-    description: 'Find tranquility at this lakefront retreat',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457183/wanderlust_DEV/image_1.jpg_wgup69.jpg',
-      filename: 'image_5.jpg',
-    },
-    price: 5705,
-    location: 'Lakefront Retreat, Nainital',
-    country: 'India',
-  },
-  {
-    title: 'Riverside Bliss',
-    description:
-      'Experience bliss at this spacious bungalow with a view of the river',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457176/wanderlust_DEV/image_7.jpg_zupfyp.jpg',
-      filename: 'image_6.jpg',
-    },
-    price: 5706,
-    location: 'Riverside Bungalow, Alleppey',
-    country: 'India',
-  },
-  {
-    title: 'Elegant Hilltop Retreat',
-    description: 'Indulge in elegance at this villa perched on a hilltop',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457202/wanderlust_DEV/image_4.jpg_onh07j.jpg',
-      filename: 'image_7.jpg',
-    },
-    price: 5707,
-    location: 'Hilltop Villa, Coorg',
-    country: 'India',
-  },
-  {
-    title: 'Secluded Forest Hideaway',
-    description: 'Escape to this secluded cabin surrounded by lush forests',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457193/wanderlust_DEV/image_8.jpg_zramw5.jpg',
-      filename: 'image_8.jpg',
-    },
-    price: 5708,
-    location: 'Forest Cabin, Munnar',
-    country: 'India',
-  },
-  {
-    title: 'Desert Paradise',
-    description: 'Discover paradise in the desert with breathtaking views',
-    image: {
-      url: 'https://res.cloudinary.com/dohdry9ia/image/upload/v1709457202/wanderlust_DEV/image_3.jpg_so53p6.jpg',
-      filename: 'image_9.jpg',
-    },
-    price: 5709,
-    location: 'Desert Oasis, Jaisalmer',
-    country: 'India',
+    category: 'Rooms',
   },
 ];
 

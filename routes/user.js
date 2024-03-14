@@ -1,10 +1,14 @@
 const express = require('express');
+const { route } = require('./listing');
 const router = express.Router();
 const User = require('../models/user.js');
-const wrapAsync = require('../utils/wrapAsync.js');
+const wrapAsync = require('../utils/wrapAsync');
 const passport = require('passport');
 const { saveRedirectUrl } = require('../middleware.js');
-const userController = require('../controllers/users.js');
+
+const userController = require('../controllers/users');
+
+router.route('/').get(userController.redirect);
 
 router
   .route('/signup')

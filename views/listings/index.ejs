@@ -2,42 +2,47 @@
 
 <div id="filters-container">
   <div id="filters">
-    <div class="filter">
-      <div><i class="fa-solid fa-fire"></i></div>
-      <p>Trending</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-bed"></i></div>
-      <p>Rooms</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-person-swimming"></i></div>
-      <p>Amazing Pools</p>
-    </div>
-    <div class="filter">
+    <a class="filter active" href="/listings">
+      <div><i class="fa-solid fa-house"></i></div>
+      <p>All</p>
+    </a>
+    <a class="filter" href="/listings/filter/Iconic cities">
       <div><i class="fa-solid fa-mountain-city"></i></div>
-      <p>Iconic Cities</p>
-    </div>
-    <div class="filter">
+      <p>Iconic cities</p>
+    </a>
+    <a class="filter" href="/listings/filter/Mountains">
       <div><i class="fa-solid fa-mountain"></i></div>
-      <p>Mountain</p>
-    </div>
-    <div class="filter">
+      <p>Mountains</p>
+    </a>
+    <a class="filter" href="/listings/filter/Castles">
       <div><i class="fa-brands fa-fort-awesome"></i></div>
       <p>Castles</p>
-    </div>
-    <div class="filter">
+    </a>
+    <a class="filter" href="/listings/filter/Rooms">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p>Rooms</p>
+    </a>
+    <a class="filter" href="/listings/filter/Amazing pools">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p>pools</p>
+    </a>
+    <a class="filter" href="/listings/filter/Camping">
       <div><i class="fa-solid fa-campground"></i></div>
       <p>Camping</p>
-    </div>
-    <div class="filter">
+    </a>
+    <a class="filter" href="/listings/filter/Farms">
       <div><i class="fa-solid fa-cow"></i></div>
       <p>Farms</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-snowflake"></i></div>
+    </a>
+    <a class="filter" href="/listings/filter/Arctic">
+      <div><i class="fa-regular fa-snowflake"></i></div>
       <p>Arctic</p>
-    </div>
+    </a>
+    <a class="filter" href="/listings/filter/Boats">
+      <div><i class="fa-solid fa-ship"></i></div>
+      <p>Boats</p>
+    </a>
+
     <div class="tax-toggle border border-secondary-subtle">
       <div class="form-check-reverse form-switch">
         <input
@@ -54,11 +59,11 @@
   </div>
 </div>
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-3">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-3 listings-container">
   <% for(let listing of allListings) { %>
   <div class="col">
     <a href="/listings/<%= listing._id %>" class="listing-link">
-      <div class="card h-100">
+      <div class="card h-100 listing-image">
         <img
           src="<%= listing.image.url %>"
           class="card-img-top card-img-effect"
@@ -67,8 +72,9 @@
         <div class="card-body">
           <p class="card-text">
             <b><%= listing.title %></b> <br />
-            &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
-            <i class="tax-info">+18% GST</i>
+            <span class="price-info" data-base-price="<%= listing.price %>">
+              &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
+            </span>
           </p>
         </div>
       </div>

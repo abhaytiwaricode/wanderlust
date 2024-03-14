@@ -7,26 +7,14 @@ const listingSchema = new Schema({
     type: String,
     required: true,
   },
-  description: {
-    type: String,
-    required: true,
-  },
+  description: String,
   image: {
     url: String,
     filename: String,
   },
-  price: {
-    type: Number,
-    required: true,
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-  country: {
-    type: String,
-    required: true,
-  },
+  price: Number,
+  location: String,
+  country: String,
   reviews: [
     {
       type: Schema.Types.ObjectId,
@@ -37,6 +25,22 @@ const listingSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User',
   },
+  category: {
+    type: String,
+    enum: [
+      'Rooms',
+      'Iconic cities',
+      'Mountains',
+      'Castles',
+      'Amazing pools',
+      'Camping',
+      'Farms',
+      'Arctic',
+      'Domes',
+      'Boats',
+    ],
+    required: true,
+  },
 });
 
 listingSchema.post('findOneAndDelete', async (listing) => {
@@ -46,5 +50,4 @@ listingSchema.post('findOneAndDelete', async (listing) => {
 });
 
 const Listing = mongoose.model('Listing', listingSchema);
-
 module.exports = Listing;
